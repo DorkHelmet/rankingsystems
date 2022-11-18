@@ -58,10 +58,10 @@ All of the following numbers are sugestions and can of course bet tweaked as nee
 ### Neophyte 
 Neophyte is the new player area, this is where everyone starts when they are new to the game, its important that people "graduate" out of this area as soon as they are comfortable with the game. This area should contain bots, which can be used when human opponent can't be found within 20-30 seconds.
 
-To make players feel progress, in the Neophyte tier it is not possible to loose RPs, they can only be gained, each win rewards you 20 points, this means in 15 wins you will be promoted into the "Real" ranked area.
+To make players feel progress, in the Neophyte tier it is not possible to loose RPs, they can only be gained, each win rewards you 20 points, this means in 15 wins you will be promoted into the "Real" ranked area no matter how many losses.
 
 ### Apprentice
-20 RPs for wins and -5 RPs for loss, this is very generous, for every win you can loose 4 times, players will feel progress. Level I can get matched with Level 3 from Disciple. 
+20 RPs for wins and -5 RPs for loss, this is very generous, for every win you can loose 4 times without really loosing your progress. 
 
 ### Disciple
 20 RPs for wins and -10 RPs for loss, for every win you can loose twice, competition will get more fierce here but players will still feel they are making progress and climbing. 
@@ -72,20 +72,36 @@ To progress in primus requires a larger than 50% win rate, this is where it gets
 ### Legendary
 In legendary you no longer use RPs, but start using raw ELO (or which ever type of ranking system is used) to represent a users standing. Leaderboard shows the ELO raiting (as current leader board). if ELO is used, everyone starts with 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
 
+
+### Match Making
+Match making finds a pool of possible opponent, the pool of opponents is expanded in the following order, each expansions happens every 20-30 seconds, always avoid matching with last 3 opponents:
+1. Same tier and same Level
+3. Same tier and if not Neophyte tier, Level 1 add level 3 from higher tier, if Level 3 add level 1 from lower tier 
+4. If Neophyte pair with bot.
+5. previous faced Opponents (but not last played)
+6. last played opponent.
+
+#### Legendary match makging
+Continue itterate on the ELO mach making system currently being used.
+
+
 ### Games required to reach Legendary
-Following is a table of the number of games that is required to reach the next tier starting from Neophyte 3 RP = 0, with a specific win %, this does not account for the level drop protection of 2 losses
-.
+Following is a table of the number of games that is required to reach the next tier starting from Neophyte 3 RP = 0, with a specific win %, this does not account for the level drop protection of 2 losses while being at 0 RP at a level.
+
+
 |Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
 |--------|--------|--------|--------|--------|--------|
 |100%| 15 | 15| 15| 15 | 60 |
-|90% | 17 | 
-|80%| |
-|70%| |
-|65%| |
-|60%| |
-|50%| Primus | 
+|90% | 17 | 18 | 18 | 19 | 72 |
+|80%| 19 | 20 | 22 | 25 | 86 |
+|75%| 20 | 22 | 24 | 30 | 96 |
+|70%| 22 | 24 | 28 | 38 | 112 |
+|65%| 24 | 27 | 32 | 50 | 133 | 
+|60%| 25 | 30 | 38 | 75 | 168 |
+|55%| 28 | 35 | 47 | 150 | 260 |
+|50%| 30 | 40 | 60 | N/A | 
 
-
+It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the argument could be, that is good because at Legendary tier is where the real competitive player starts so make it doable for playes to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 levels instead of the proposed 3 levels, this would show things down.
 
 ### Season reset
 CTA has already said there will be seasons, its not clear yet if those seasons are going to conside with the release of new set of cards, or the ladder reset is going to be more frequent, e.g. every 6 month based on card set release cycle, or monthly. I will make some suggestions on how to do reset, assuming a 6 month cycle for card releases (e.g. as we know Arkhante -> Mantris -> Rift, they are suppose to be roughly 6 month apart, so lets go with that assumption and for this proposal I will refer to it as Set Season vs Leaderboard Season.
@@ -99,7 +115,7 @@ Move players down according to this:
 * Apprentice all players are reset to Apprentice level 3 and RP = 0.
 * Disciple all players are reset to Apprentice level 2 and RP = 0.
 * Primus all players are reset to Apprentice level 1 and RP = 0.
-* Legendary all players are reset to Disciple level 2 and RP = 0. ELO is reset to 1200.
+* Legendary all players are reset to Disciple level 3 and RP = 0. 
 
 
 This will let players climb up again, and it will also allow for people of similar skill to be faced off against each other for the initial hectic moments after a reset. Each Leaderboard Season should be archivied and saved, so people can go back and look at it (players do like to look at their previous ATH achiements etc).
@@ -107,13 +123,13 @@ This will let players climb up again, and it will also allow for people of simil
 #### Set Season reset
 The set will take place at the same time as the 3rd Leaderboard Season reset for the Set Season, and same procedure will be be used, but it will be possible to have a Set Season leaderboard based on ther average performance across all the 3 leaderboard seasons, and thus possible to crown a Set Season  winner, (deault to 1100 ELO for Legendary players that did not make it to legendary for other seasons).
 
+#### Climbing after reset
+To accelerate Legendary players climb back to Legendary status, a boost could be used for the first week after a reset, e.g. instead of earning 20 RP for a win ex-legendary players would earn 30 points while in disciple, 25 points in primus. This serves two purposes:
+1. minimizes the amount of times strong players might get matched up with much weaker players.
+2. makes the grind for legendary players shorter.
 
-
-#### increased RP gain after reset
-
-
-
-
+#### Match Making after reset
+To minimize pairing legendary players with players that have never reached legendary before, all legendary players will first be matched with other Legendary players based on ELO raitings in the same tier, if no other legendary players can be found in tier after 30-45 second match with other players in the tier.
 
 ## . Existing Systems
 ### 1.1 Magic Arena
