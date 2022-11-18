@@ -1,38 +1,10 @@
-# Topic
-
-# 1. ELO in CTA
-
-Expected result of the match for player $E_A$ where $R_A$ = Rating of Player A, and $R_B$ = Rating of Player B.
-$$E_A= \frac{1}{1+10^{\frac{R_B-R_A}{400}}}$$
-
-Same for Expected result of Player B $E_B$.
-$$E_B= \frac{1}{1+10^{\frac{R_A-R_B}{400}}}$$
-
-to calculate the new rating of player A, $R\'_A$
-
-$$R\'_A = R_A + K * (S_A - E_A)$$
-
-$S_A$ is the score of the game, 1 = win , 0 = loss
-$K$ (K-Factor) scales, as per Quentins post[^3], for ratings below 1750 $K = 40$ 
-
-CTA uses a scalling K-Factor.
-| Rating        | K-Factor      | 
-| ---------- |:----------:|
-|< 1750 | 40 |
-|1751 - 2250 |  30|
-|2251 - 2550|  20|
-|2550 < |  10|
-
-
-
-
 # CTA ranking system
 
 ## Skill, Progression or Hybrid?
-In chess ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g. for new players its a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In the next Section I explain how some of the most popular online TCG/CCGs have implemented their system, but for now lets dive into my proposal for CTA.
+In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g. for new players its a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In the next Section I explain how some of the most popular online TCG/CCGs have implemented their system, but for now lets dive into my proposal for CTA.
 
 ## Tierd ranking system
-The purpose of a tierd system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make sure people come back and play again, anyone that regularly get dominiated by stronger players is probably going to quite playing soon. It is also important to have an area where the skilled competitive players can face others like them, where there is real competition. This proposal is based on existing games and their systems (see below), I have just tweaked it to what I think is a CTA context.
+The purpose of a tierd ranking system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make people come back and play again, anyone that regularly get dominiated by stronger players is probably going to stop playing. It is also important to have an area where top players can face each other, where there is real competition. This proposal comes from my person interest in ranking/match making system and having played and read a lot about many different ranking system.
 
 I propose the following system for CTA:
 
@@ -45,15 +17,15 @@ There are 5 tiers (naming of course can be anything)
 
 The first four tiers consist of 3 levels each, Level 3 is the lowest level in a tier, Level 1 highest, it goes Neophyte 1 -> Apprentice 3. 
 
-Each level is made up of 100 RP (Ranking points). When you win a game you earn a certain amount of RPs based on the tier you are in, when you loose a game you will loose a certain amount of RPs, with 3 levels per tier the player need to accumulate a total of 300 RP to get promoted to the next tier. It is not possible to get Demoted from a tier, though players can move from Level 1 to Level 2.
+Each level is made up of 100 RP (Ranking points). When you win a game you earn a certain amount of RPs based on the tier you are in, when you loose a game you will loose a certain amount of RPs, with 3 levels per tier the player need to accumulate a total of 300 RP to get promoted to the next tier. It is not possible to get demoted from a tier, though players can move from Level 1 to Level 2.
 
-All of the following numbers are sugestions and can of course bet tweaked as needed.
+All of the following numbers are sugestions and can of course be tweaked as needed.
 |Tier | Win RPs | Loss RPs|
 |-----|---------|---------|
 |Neophyte| 20 | 0 |
-|Apprentice| 20 | 5 |
-|Disciple| 20 | 10 |
-|Primus| 20 | 20 |
+|Apprentice| 20 | -5 |
+|Disciple| 20 | -10 |
+|Primus| 20 | -20 |
 
 ### Neophyte 
 Neophyte is the new player area, this is where everyone starts when they are new to the game, its important that people "graduate" out of this area as soon as they are comfortable with the game. This area should contain bots, which can be used when human opponent can't be found within 20-30 seconds.
@@ -70,11 +42,14 @@ To make players feel progress, in the Neophyte tier it is not possible to loose 
 To progress in primus requires a larger than 50% win rate, this is where it gets challanging.
 
 ### Legendary
-In legendary you no longer use RPs, but start using raw ELO (or which ever type of ranking system is used) to represent a users standing. Leaderboard shows the ELO raiting (as current leader board). if ELO is used, everyone starts with 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
+In legendary you no longer use RPs, but start using raw ELO (or whichever type of ranking system is used) to represent a users standing. Leaderboard shows the ELO raiting (as the current leaderboard). if ELO is used, everyone starts with rating of 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
+
+### Promotion & Demotions
+Once a player 
 
 
 ### Match Making
-Match making finds a pool of possible opponent, the pool of opponents is expanded in the following order, each expansions happens every 20-30 seconds, always avoid matching with last 3 opponents:
+Match making finds a pool of possible opponent, the pool of opponents is expanded in the following order, each expansions happens every 20-30 seconds, always avoid matching with last 3 opponents as long as possible:
 1. Same tier and same Level
 3. Same tier and if not Neophyte tier, Level 1 add level 3 from higher tier, if Level 3 add level 1 from lower tier 
 4. If Neophyte pair with bot.
@@ -130,6 +105,32 @@ To accelerate Legendary players climb back to Legendary status, a boost could be
 
 #### Match Making after reset
 To minimize pairing legendary players with players that have never reached legendary before, all legendary players will first be matched with other Legendary players based on ELO raitings in the same tier, if no other legendary players can be found in tier after 30-45 second match with other players in the tier.
+
+# 1. ELO in CTA
+Explanation how ELO works in CTA.
+
+Expected result of the match for player $E_A$ where $R_A$ = Rating of Player A, and $R_B$ = Rating of Player B.
+$$E_A= \frac{1}{1+10^{\frac{R_B-R_A}{400}}}$$
+
+Same for Expected result of Player B $E_B$.
+$$E_B= \frac{1}{1+10^{\frac{R_A-R_B}{400}}}$$
+
+to calculate the new rating of player A, $R\'_A$
+
+$$R\'_A = R_A + K * (S_A - E_A)$$
+
+$S_A$ is the score of the game, 1 = win , 0 = loss
+$K$ (K-Factor) scales, as per Quentins post[^3], for ratings below 1750 $K = 40$ 
+
+CTA uses a scalling K-Factor.
+| Rating        | K-Factor      | 
+| ---------- |:----------:|
+|< 1750 | 40 |
+|1751 - 2250 |  30|
+|2251 - 2550|  20|
+|2550 < |  10|
+
+
 
 ## . Existing Systems
 ### 1.1 Magic Arena
