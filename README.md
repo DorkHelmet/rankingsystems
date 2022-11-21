@@ -1,19 +1,54 @@
-# CTA ranking system
+### Table of Content
+* [Skill, Progression or Hybrid?](#skill-progression-or-hybrid)
+* [Tiered ranking system](#tiered-ranking-system)
+  * [Neophyte](#neophyte)
+  * [Apprentice](#apprentice)
+  * [Disciple](#disciple)
+  * [Primus](#primus)
+  * [Legendary](#legendary)
+* [Promotion & Demotion](#promotion--demotion)
+  * [Promotion](#promotion)
+  * [Demotion](#demotion)
+* [Match Making](#match-making)
+ * [Legendary match making](#legendary-match-making)
+* [Games required to reach Legendary](#games-required-to-reach-legendary)
+* [Season reset](#season-reset)
+  * [Leaderboard Season reset](#leaderboard-season-reset)
+  * [Set Season reset](#set-season-reset)
+  * [Climbing after reset](#climbing-after-reset)
+  * [Match Making after reset](#match-making-after-reset)
+* [Conclusion](#conclusion)
+* [ELO in CTA](#elo-in-cta)
+* [Other card games and their ranking systems](#other-card-games-and-their-ranking-systems)
+  * [Magic Arena](#magic-arena)
+  * [Legends of Runeterra](#legends-of-runeterra)
+  * [Gwent](#gwent)
+  * [Yu-Gi-Oh Master Duel](#yu-gi-oh-master-duel)
+  * [Pokemon Online](#pokemon-online)
+  * [HeartStone](#heartstone)
+ * [Alternatives to ELO](#alternatives-to-elo)
+   * [Glicko](#glicko)
+   * [Glicko 2](#glicko-2)
+   * [TrueSkill](#trueskill-1-and-2)
+   * [Bayesian ELO](#bayesian-elo)
+ * [Great resources on the Ranking System/Match making topic](#great-resources-on-the-ranking-systemmatch-making-topic)
 
+# CTA ranking system
+  
 ## Skill, Progression or Hybrid?
 In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc. you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g., for new players it's a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In a [later section](#existing-systems) I explain how some of the most popular online TCG/CCGs have implemented their system, but for now let's dive into my proposal for CTA.
 
-## Tierd ranking system
+## Tiered ranking system
 The purpose of a tiered ranking system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make people come back and play again, anyone that regularly get dominated by stronger players is probably going to stop playing. It is also important to have an area where top players can face each other, where there is real competition. This proposal comes from my person interest in ranking/match making system and having played and read a lot about many different ranking systems.
 
 I propose the following system for CTA:
 
 There are 5 tiers (naming of course can be anything)
-* Neophyte  - New player area
-* Apprentice - Players with Experience
-* Disciple - Players with Experience
-* Primus - Players with Experience
-* Legendary - Leader board
+* **Neophyte**  - New player area
+* **Apprentice** - Players with Experience
+* **Disciple** - Players with Experience
+* **Primus** - Players with Experience
+* **Legendary** - Leader board
 The first four tiers consist of 3 levels each, Level 3 is the lowest level in a tier, Level 1 highest, it goes Neophyte 1 -> Apprentice 3.
 
 Each level is made up of 100 RP (Ranking points). When you win a game, you earn a certain number of RPs based on the tier you are in, when you lose a game you will lose a certain number of RPs, with 3 levels per tier the player needs to accumulate a total of 300 RP to get promoted to the next tier. It is not possible to get demoted from a tier, though players can move from Level 1 to Level 2.
@@ -43,7 +78,7 @@ To progress in primus requires a larger than 50%-win rate, this is where it gets
 ### Legendary
 In legendary you no longer use RPs but start using raw ELO (or whichever type of ranking system is used) to represent a user's standing. Leaderboard shows the ELO rating (as the current leaderboard). if ELO is used, everyone starts with a rating of 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
 
-### Promotion & Demotions
+### Promotion & Demotion
 
 #### Promotion
 Once a player goes past 100 RP for a level they are promoted to the next level (possible tier promotion, if it was Level 1). Each promotion the player will automatically get 5 RP in the new level.
@@ -116,7 +151,7 @@ To minimize pairing legendary players with players that have never reached legen
 The proposed system is an amalgamation of many of the most prominent competitive online card games currently. I have tried to include some of what I consider the best features and put them together with the purpose to make gaming the most fun for the most players, where players can feel a sense of progress, but also making players feel that reaching "Legendary" status is not easy and require a certain amount of dedication but not an obscene amount of it. Obliviously there are many numbers and features that can be tweaked, but I strongly think that a system like this would greatly enhance the player experience for both old and new players. One thing that I did not delve into here, but which is closely linked to the ranking system is of course the rewards! There are 2 schools of thoughts on this either you give a bigger reward at the end of the season based on highest achievement, or you have one-time (ever, or per season) rewards as players reach certain milestones e.g., Levels, tiers etc. Very common in other card games is of course the granting of avatars, card backs, frames, borders and other cosmetic things for players to show off how far they reached in a previous season.
 
 
-# 1. ELO in CTA
+# ELO in CTA
 Explanation how ELO works in CTA.
 
 Expected result of the match for player $E_A$ where $R_A$ = Rating of Player A, and $R_B$ = Rating of Player B.
@@ -142,8 +177,8 @@ CTA uses a scalling K-Factor.
 
 
 
-## Existing Systems
-### 1.1 Magic Arena
+## Other card games and their ranking systems 
+### Magic Arena
 MA uses a hidden MMR (like most games), but like most other system they have choosen to implement a tierd progressing system for ranked games:
 * There are six tiers: Bronze, Silver, Gold, Platinum, Diamond, and Mythic. Each non-Mythic rank has four levels, with level 1 being the best and level 4 being the worst within that tier. For Constructed, each level consists of 6 steps. For Limited, Bronze consists of 4 steps and all other tiers consist of 5 steps.
 * Tiers operate separately for Constructed and Limited. To tier up in Constructed, you’ll want to play in the “Ranked” best-of-one games or in the “Ranked” best-of-three games. Both contribute towards the same tier. To tier up in Limited, you’ll want to enter the best-of-one Draft events.
@@ -155,7 +190,7 @@ Although losses can push you down a level within a tier (e.g., from Gold 3 to Go
 
 [Channel fireball more information about the ranking system](https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/how-many-games-do-you-need-to-play-to-hit-mythic-in-mtg-arena/#:~:text=There%20are%20six%20ranks%3A%20Bronze,tier%20consists%20of%206%20steps.)
 
-### 1.2 Legends of Runeterra
+### Legends of Runeterra
 LoR uses a very similar system to LoL, basically:
 * There are 7 tiers, ordered: Iron, Bronze, Silver, Gold, Platinum, Diamond and Master.
 * Within each tier are numbered divisions, namely I, II, III and IV. The lower the division within a given tier, the closer each player is to the next tier. By earning enough points in Silver I, a player will be promoted to Gold IV.
@@ -195,7 +230,7 @@ Bronze and Iron accounts will reset to Iron IV.
 * https://support-legendsofruneterra.riotgames.com/hc/en-us/articles/360041193433-Ranked-FAQ-Legends-of-Runeterra
 
 
-### 1.3 Gwent
+### Gwent
 
 When you're playing in Ranked Mode, you will be matched against opponents of the same rank. The ranks start from Rank 30 and go up to Rank 0 (also called Pro Rank). To go from a rank to another one, you need to earn 5 mosaic pieces and once you reach a new rank, you cannot go down during the season. You get a mosaic piece when you win a game, you lose one when you lose a game.
 
@@ -205,17 +240,17 @@ At the end of the season, after getting your rewards, you will lose 0-3 rank(s) 
 
 https://www.reddit.com/r/gwent/wiki/ranked/#wiki_ranked_mode
 
-### 1.4 Yu-Gi-Oh Master Duel
+### Yu-Gi-Oh Master Duel
 
 there are five ranks that can be earned, all of which contain different tiers that you can rise through. The YuGiOh Master Duel tiers are Rookie, Bronze, Silver, Gold, and Platinum, which all have a five further levels except Rookie, which has two.
 
 https://www.ggrecon.com/guides/yu-gi-oh-master-duel-ranks-ranked-system/
 
-### 1.5 Pokemon Online
+### Pokemon Online
 doens't really have a ranking system.. 
 https://forums.pokemontcg.com/topic/76579-competitive-modes-on-ptcgo/
 
-### 1.6 HeartStone
+### HeartStone
 
 Heartstone tracks players win through the ranking system using "Stars", get enough stars and you will rank up. 
 
