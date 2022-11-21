@@ -1,10 +1,10 @@
 # CTA ranking system
 
 ## Skill, Progression or Hybrid?
-In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g. for new players its a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In a [later section](#existing-systems) I explain how some of the most popular online TCG/CCGs have implemented their system, but for now lets dive into my proposal for CTA.
+In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc. you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g., for new players it's a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In a [later section](#existing-systems) I explain how some of the most popular online TCG/CCGs have implemented their system, but for now let's dive into my proposal for CTA.
 
 ## Tierd ranking system
-The purpose of a tierd ranking system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make people come back and play again, anyone that regularly get dominiated by stronger players is probably going to stop playing. It is also important to have an area where top players can face each other, where there is real competition. This proposal comes from my person interest in ranking/match making system and having played and read a lot about many different ranking system.
+The purpose of a tiered ranking system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make people come back and play again, anyone that regularly get dominated by stronger players is probably going to stop playing. It is also important to have an area where top players can face each other, where there is real competition. This proposal comes from my person interest in ranking/match making system and having played and read a lot about many different ranking systems.
 
 I propose the following system for CTA:
 
@@ -14,12 +14,11 @@ There are 5 tiers (naming of course can be anything)
 * Disciple - Players with Experience
 * Primus - Players with Experience
 * Legendary - Leader board
+The first four tiers consist of 3 levels each, Level 3 is the lowest level in a tier, Level 1 highest, it goes Neophyte 1 -> Apprentice 3.
 
-The first four tiers consist of 3 levels each, Level 3 is the lowest level in a tier, Level 1 highest, it goes Neophyte 1 -> Apprentice 3. 
+Each level is made up of 100 RP (Ranking points). When you win a game, you earn a certain number of RPs based on the tier you are in, when you lose a game you will lose a certain number of RPs, with 3 levels per tier the player needs to accumulate a total of 300 RP to get promoted to the next tier. It is not possible to get demoted from a tier, though players can move from Level 1 to Level 2.
 
-Each level is made up of 100 RP (Ranking points). When you win a game you earn a certain amount of RPs based on the tier you are in, when you loose a game you will loose a certain amount of RPs, with 3 levels per tier the player need to accumulate a total of 300 RP to get promoted to the next tier. It is not possible to get demoted from a tier, though players can move from Level 1 to Level 2.
-
-All of the following numbers are sugestions and can of course be tweaked as needed.
+All of the following numbers are suggestions and can of course be tweaked as needed.
 |Tier | Win RPs | Loss RPs|
 |-----|---------|---------|
 |Neophyte| 20 | 0 |
@@ -36,22 +35,22 @@ To make players feel progress, in the Neophyte tier it is not possible to loose 
 20 RPs for wins and -5 RPs for loss, this is very generous, for every win you can loose 4 times without really loosing your progress. 
 
 ### Disciple
-20 RPs for wins and -10 RPs for loss, for every win you can loose twice, competition will get more fierce here but players will still feel they are making progress and climbing. 
+20 RPs for wins and -10 RPs for loss, for every win you can lose twice, competition will get fiercer here, but players will still feel they are making progress and climbing.
 
 ### Primus
-To progress in primus requires a larger than 50% win rate, this is where it gets challanging.
+To progress in primus requires a larger than 50%-win rate, this is where it gets challenging.
 
 ### Legendary
-In legendary you no longer use RPs, but start using raw ELO (or whichever type of ranking system is used) to represent a users standing. Leaderboard shows the ELO raiting (as the current leaderboard). if ELO is used, everyone starts with rating of 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
+In legendary you no longer use RPs but start using raw ELO (or whichever type of ranking system is used) to represent a user's standing. Leaderboard shows the ELO rating (as the current leaderboard). if ELO is used, everyone starts with a rating of 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
 
 ### Promotion & Demotions
 
 #### Promotion
-Once a player goes past 100 RP for a level they are promoted to the next level (possible tier promation, if it was Level 1). Each promation the player will autoamtically get 5 RP in the new level. 
+Once a player goes past 100 RP for a level they are promoted to the next level (possible tier promotion, if it was Level 1). Each promotion the player will automatically get 5 RP in the new level.
 
 #### Demotion
-While a season is ongoing a player cannot be demoted to a lower tier, if the player is at 0 RP at a Level 3, loosing again will not change anything. A player start each level with 5 RPs, if a player loose a game and would end up with 0 or less than 0 RPs he will have 0 RPs for that level. A level demotion will only happen on the second loss while having 0 RPs. e.g.
-* Player A at level Primus 2, has 5 RPs, he looses a game, he will now be at Primus 2, with 0 RP, he looses again, but because it was the first loss at RP 0 there was no demotion, but if the player loose again the player will be demoted to Primus 3. 
+While a season is ongoing a player cannot be demoted to a lower tier, if the player is at 0 RP at a Level 3, loosing again will not change anything. A player starts each level with 5 RPs, if a player loses a game and ends up with 0 or less than 0 RPs, he will have 0 RPs for that level. A level demotion will only happen on the second loss while having 0 RPs. e.g.
+* Player A at level Primus 2, has 5 RPs, he loses a game, he will now be at Primus 2, with 0 RP, he loses again, but because it was the first loss at RP 0 there was no demotion, but if the player loose again the player will be demoted to Primus 3.
 
 
 ### Match Making
@@ -63,11 +62,11 @@ Match making finds a pool of possible opponent, the pool of opponents is expande
 6. last played opponent.
 
 #### Legendary match making
-Continue itterate on the ELO ranking system currently being used.
+Continue to itterate on the ELO ranking system currently being used.
 
 
 ### Games required to reach Legendary
-Following is a table of the number of games that is required to reach the next tier starting from Neophyte 3 RP = 0, with a specific win %, this does not account for the level demotion protection of 2 losses while being at 0 RP at a level.
+The following is a table of the number of games that are required to reach the next tier starting from Neophyte 3 RP = 0, with a specific win %, this does not account for the level demotion protection of 2 losses while being at 0 RP at a level.
 
 
 |Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
@@ -82,39 +81,39 @@ Following is a table of the number of games that is required to reach the next t
 |55%| 28 | 35 | 47 | 150 | 260 |
 |50%| 30 | 40 | 60 | N/A | 
 
-It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the counter argument is that it is good because at Legendary tier is where the real competitive play starts. So make it doable for playes to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 or even 5 levels instead of the proposed 3 levels, this would slow things down, but still make people feel like they are making progress.
+It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the counter argument is that it is good because at Legendary tier is where the real competitive play starts. Making it doable for players to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 or even 5 levels instead of the proposed 3 levels, this would slow things down, but still make people feel like they are making progress.
 
 ### Season reset
-CTA has already said there will be seasons, its not clear yet if those seasons are going to conside with the release of new set of cards, or the ladder reset is going to be more frequent, e.g. every 6 month based on card set release cycle, or monthly. I will make some suggestions on how to do reset, assuming a 6 month cycle for card releases (e.g. as we know Arkhante -> Mantris -> Rift, they are suppose to be roughly 6 month apart, so lets go with that assumption and for this proposal I will refer to it as Set Season vs Leaderboard Season.
+CTA has already said there will be seasons, it is not clear yet if those seasons are going to coincide with the release of new set of cards, or the ladder reset is going to be more frequent, e.g., every 6-month based on card set release cycle, or monthly. I will make some suggestions on how to do reset, assuming a 6-month cycle for card releases (e.g., as we know Arkhante -> Mantris -> Rift, they are supposed to be roughly 6 months apart, so let's go with that assumption and for this proposal I will refer to it as Set Season vs Leaderboard Season.
 
 So, Set Season = 6 months, I would propose then that Leaderboard Season = 2 Months. This would allow for 3 Leaderboard seasons for each Set Season.
 
 #### Leaderboard Season reset
-Leaderboard seasons can be refeered to as "Arkhante LS I" meaning "Arkhante Set Season, Leaderboard Season I" 
+Leaderboard seasons can be referred to as "Arkhante LS I" meaning "Arkhante Set Season, Leaderboard Season I"
 Move players down according to this:
-* Neophyte is unafected by reset.
+* Neophyte is unaffected by reset.
 * Apprentice all players are reset to Apprentice level 3 and RP = 0.
 * Disciple all players are reset to Apprentice level 2 and RP = 0.
 * Primus all players are reset to Apprentice level 1 and RP = 0.
-* Legendary all players are reset to Disciple level 3 and RP = 0. 
+* Legendary all players are reset to Disciple level 3 and RP = 0.
 
 
-This will let players climb up again, and it will also allow for people of similar skill to be faced off against each other for the initial hectic moments after a reset. Each Leaderboard Season should be archivied and saved, so people can go back and look at it (players do like to look at their previous ATH achiements etc).
+This will let players climb up again, and it will also allow for people of similar skill to face off against each other for the initial hectic moments after a reset. Each Leaderboard Season should be archived and saved, so people can go back and look at it (players do like to look at their previous ATH achievements  etc.).
 
 #### Set Season reset
-The set will take place at the same time as the 3rd Leaderboard Season reset for the Set Season, and same procedure will be be used, but it will be possible to have a Set Season leaderboard based on ther average performance across all the 3 leaderboard seasons, and thus possible to crown a Set Season  winner, (deault to 1100 ELO for Legendary players that did not make it to legendary for other seasons).
+The set will take place at the same time as the 3rd Leaderboard Season reset for the Set Season, and same procedure will be used, but it will be possible to have a Set Season leaderboard based on there average performance across all the 3 leaderboard seasons, and thus possible to crown a Set Season  winner, (default to 1100 ELO for Legendary players that did not make it to legendary for other seasons).
 
 #### Climbing after reset
-To accelerate Legendary players climb back to Legendary status, a boost could be used for the first week after a reset, e.g. instead of earning 20 RP for a win ex-legendary players would earn 30 points while in disciple, 25 points in primus. This serves two purposes:
-1. minimizes the amount of times strong players might get matched up with much weaker players.
+To accelerate Legendary players, climb back to Legendary status, a boost could be used for the first week after a reset, e.g., instead of earning 20 RP for a win ex-legendary players would earn 30 points while in disciple, 25 points in primus. This serves two purposes:
+1. minimizes the number of times strong players might get matched up with much weaker players.
 2. makes the grind for legendary players shorter.
 
 #### Match Making after reset
-To minimize pairing legendary players with players that have never reached legendary before, all legendary players will first be matched with other Legendary players based on ELO raitings in the same tier, if no other legendary players can be found in tier after 30-45 second match with other players in the tier.
+To minimize pairing legendary players with players that have never reached legendary before, all legendary players will first be matched with other Legendary players based on ELO ratings in the same tier, if no other legendary players can be found in tier after 30-45 second match with other players in the tier.
 
 
 ### Conclusion
-The proposed system is an amalgation of many of the most prominent competitive online card games currently. I have tried to include some of what I consider the best features and put them together with the purpose to make gaming the most fun for the most players, where players can feel a sense of progress, but also making players feel that reaching "Legendary" status is not easy and require a certain amount of dedication but not an obecene amount of it. Obiviously there are many numbers and features that can be tweaked, but I strongly think that a system like this would greatly enhance the player experience for both old and new players. One thing that I did not deleve into here, but which is closely linked to the ranking system is of course the rewards! There are 2 schools of thoughts on this either you give a bigger reward at the end of the season based on highest achivement, or you have one time (ever, or per season) rewards as players reach certain milestones e.g. Levels, tiers etc. Very common in other card games is of course the granting of avatars, card backs, frames, borders and other cosmetic things for players to show off how far they reached in a previous season.
+The proposed system is an amalgamation of many of the most prominent competitive online card games currently. I have tried to include some of what I consider the best features and put them together with the purpose to make gaming the most fun for the most players, where players can feel a sense of progress, but also making players feel that reaching "Legendary" status is not easy and require a certain amount of dedication but not an obscene amount of it. Obliviously there are many numbers and features that can be tweaked, but I strongly think that a system like this would greatly enhance the player experience for both old and new players. One thing that I did not delve into here, but which is closely linked to the ranking system is of course the rewards! There are 2 schools of thoughts on this either you give a bigger reward at the end of the season based on highest achievement, or you have one-time (ever, or per season) rewards as players reach certain milestones e.g., Levels, tiers etc. Very common in other card games is of course the granting of avatars, card backs, frames, borders and other cosmetic things for players to show off how far they reached in a previous season.
 
 
 # 1. ELO in CTA
@@ -145,7 +144,7 @@ CTA uses a scalling K-Factor.
 
 ## Existing Systems
 ### 1.1 Magic Arena
-MA uses a hidden MMR, but like most other system they have choosen to implement a tierd progressing system for ranked games:
+MA uses a hidden MMR (like most games), but like most other system they have choosen to implement a tierd progressing system for ranked games:
 * There are six tiers: Bronze, Silver, Gold, Platinum, Diamond, and Mythic. Each non-Mythic rank has four levels, with level 1 being the best and level 4 being the worst within that tier. For Constructed, each level consists of 6 steps. For Limited, Bronze consists of 4 steps and all other tiers consist of 5 steps.
 * Tiers operate separately for Constructed and Limited. To tier up in Constructed, you’ll want to play in the “Ranked” best-of-one games or in the “Ranked” best-of-three games. Both contribute towards the same tier. To tier up in Limited, you’ll want to enter the best-of-one Draft events.
 * Everyone initially starts at Bronze level 4. You gain steps with wins: in best-of-one, it’s 2 steps gained per win in Bronze and Silver and 1 step gained per win in Gold, Platinum, and Diamond. You lose steps with a defeat: in best-of-one, it’s 0 steps lost per win in Bronze and 1 step lost per win in all other ranks.
@@ -242,7 +241,7 @@ https://hearthstone.fandom.com/wiki/Ranked
 
 ## Glicko
 
-Glicko was designed as an improvment to ELO, the math is more complicated, but what it introduces is a variable called $RD$ Rating Deviation, to track how active a player is and how this might make their rating deviate away from the actual number. Its adding variability over time. This translates to less variability in ratings gained/lost for players that play more regularly and are generally more active. For unrated players, or people that play rarely the rating jumps can be significant, this is done in an attempt to faster find the correct level of the player. One other big differences vs ELO is that ratings are not a zero sum, e.g. winner and loose will not gain/loose the same number of rating points, this is all related to the rating variablity.
+Glicko was designed as an improvement to ELO. The math is more complicated, but what it introduces is a variable called $RD$ Rating Deviation, to track how active a player is and how this might make their rating deviate away from the actual number. It's adding variability over time. This translates to less variability in ratings gained/lost for players that play more regularly and are generally more active. For unrated players, or people that play rarely the rating jumps can be significant, this is done in an attempt to faster find the correct level of the player. One other big differences vs ELO is that ratings are not a zero sum, e.g. winner and loose will not gain/loose the same number of rating points, this is all related to the rating variability.
 
 for an easy overview of the glicko system: https://www.englishchess.org.uk/wp-content/uploads/2012/04/The_Glicko_system_for_beginners1.pdf
 
@@ -253,8 +252,7 @@ and of course wikipedia got good coverage of it, and refernce to the original pa
 Glicko 2 is an extenstion of the Glicko system. Glicko 2 adds a 3rd variable to the equaiton $\sigma$ which measures the degree of expected fluctuation in a player’s rating, based on how erratic the player's performances are. For instance, a player's rating volatility would be low when they performed at a consistent level, and would increase if they had exceptionally strong results after that period of consistency. The math gets a lot more complicated.
 
 ## TrueSkill (1 and 2)
-
-This is Microsofts propritary system that probably require some type of licencing to use. It was designed to accomodate for team battles and infer a team 's strength based on the team members and matching against other teams and create rating system for both teams as well as induviduals. Math gets a lot more complicated, though it can be slightly simplified for the 1v1 environement.
+This is Microsoft's proprietary system that probably require some type of licensing to use. It was designed to accommodate for team battles and infer a team 's strength based on the team members and matching against other teams and create rating system for both teams as well as individuals. Math gets a lot more complicated, though it can be slightly simplified for the 1v1 environment.
 
 https://www.microsoft.com/en-us/research/uploads/prod/2018/03/trueskill2.pdf
 
@@ -268,8 +266,6 @@ https://www.remi-coulom.fr/Bayesian-Elo/
 * interesting talk from Mario Izquierdo GDC 2017: https://www.youtube.com/watch?v=VnOVLBbYlU0 https://twitter.com/joshua_menke
 * Bayesian Approximation Method for Online Ranking - https://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf
 * An Elo-like System for Massive Multiplayer Competitions - https://arxiv.org/pdf/2101.00400.pdf
-
-
 
 ## Footnotes
 
