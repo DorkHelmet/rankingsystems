@@ -36,7 +36,7 @@
 # CTA ranking system
   
 ## Skill, Progression or Hybrid?
-In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc. you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g., for new players it's a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In a [later section](#existing-systems) I explain how some of the most popular online TCG/CCGs have implemented their system, but for now let's dive into my proposal for CTA.
+In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc. you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g., for new players it's a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In a [later section](#other-card-games-and-their-ranking-systems) I explain how some of the most popular online TCG/CCGs have implemented their system, but for now let's dive into my proposal for CTA.
 
 ## Tiered ranking system
 The purpose of a tiered ranking system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make people come back and play again, anyone that regularly get dominated by stronger players is probably going to stop playing. It is also important to have an area where top players can face each other, where there is real competition. This proposal comes from my person interest in ranking/match making system and having played and read a lot about many different ranking systems.
@@ -165,7 +165,7 @@ to calculate the new rating of player A, $R\'_A$
 $$R\'_A = R_A + K * (S_A - E_A)$$
 
 $S_A$ is the score of the game, 1 = win , 0 = loss
-$K$ (K-Factor) scales, as per Quentins post[^3], for ratings below 1750 $K = 40$ 
+$K$ (K-Factor) scales, as per Quentins post[^1], for ratings below 1750 $K = 40$ 
 
 CTA uses a scalling K-Factor.
 | Rating        | K-Factor      | 
@@ -304,4 +304,4 @@ https://www.remi-coulom.fr/Bayesian-Elo/
 
 ## Footnotes
 
-[^3]: https://discord.com/channels/917028207566401586/917028207566401593/1041989794550530098
+[^1]: https://discord.com/channels/917028207566401586/917028207566401593/1041989794550530098
