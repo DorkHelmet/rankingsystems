@@ -81,11 +81,11 @@ In legendary you no longer use RPs but start using raw ELO (or whichever type of
 ### Promotion & Demotion
 
 #### Promotion
-Once a player goes past 100 RP for a level they are promoted to the next level (possible tier promotion, if it was Level 1). Each promotion the player will automatically get 5 RP in the new level.
+Once a player goes past 100 RP for a level they are promoted to the next level (possible tier promotion, if it was Level 1). After a promotion the player will automatically get 5 RP in the new level.
 
 #### Demotion
-While a season is ongoing a player cannot be demoted to a lower tier, if the player is at 0 RP at a Level 3, loosing again will not change anything. A player starts each level with 5 RPs, if a player loses a game and ends up with 0 or less than 0 RPs, he will have 0 RPs for that level. A level demotion will only happen on the second loss while having 0 RPs. e.g.
-* Player A at level Primus 2, has 5 RPs, he loses a game, he will now be at Primus 2, with 0 RP, he loses again, but because it was the first loss at RP 0 there was no demotion, but if the player loose again the player will be demoted to Primus 3.
+While a season is ongoing a player cannot be demoted to a lower tier, if the player is at 0 RP at a Level 3, loosing multiple times will not change the tier. if a player loses a game and ends up with 0 or less than 0 RPs, he will have 0 RPs for that level. A level demotion will only happen on the second loss while having 0 RPs. When a player is demoted a level, the new RP in the lower level will be 95 RP. e.g. 
+* Player A at level Primus 2, has 5 RPs, he loses a game, he will now be at Primus 2, with 0 RP, he loses again, but because it was the first loss at RP 0 there was no demotion, but if the player loose again the player will be demoted to Primus 3 with 95 RP.
 
 
 ### Match Making
@@ -119,6 +119,8 @@ The following is a table of the number of games that are required to reach the n
 It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the counter argument is that it is good because at Legendary tier is where the real competitive play starts. Making it doable for players to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 or even 5 levels instead of the proposed 3 levels, this would slow things down, but still make people feel like they are making progress.
 
 #### 4 Levels per tier
+If the system is expanded to 4 Levels per tier.
+
 |Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
 |--------|--------|--------|--------|--------|--------|
 |100%|20|20|20|20| 80|
@@ -132,6 +134,8 @@ It could be argued that these numbers are too small, and too many players might 
 |50%|40|	54|	80| N/A| |		
 
 #### 5 Levels per tier
+If the system is expanded to 5 Levels per tier.
+
 |Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
 |--------|--------|--------|--------|--------|--------|
 |100%|25|25|25|25| 100|
@@ -154,11 +158,11 @@ So, Set Season = 6 months, I would propose then that Leaderboard Season = 2 Mont
 #### Leaderboard Season reset
 Leaderboard seasons can be referred to as "Arkhante LS I" meaning "Arkhante Set Season, Leaderboard Season I"
 Move players down according to this:
-* Neophyte is unaffected by reset.
-* Apprentice all players are reset to Apprentice level 3 and RP = 0.
-* Disciple all players are reset to Apprentice level 2 and RP = 0.
-* Primus all players are reset to Apprentice level 1 and RP = 0.
-* Legendary all players are reset to Disciple level 3 and RP = 0.
+* **Neophyte** is unaffected by reset.
+* **Apprentice** all players are reset to Apprentice level 3 and RP = 0.
+* **Disciple** all players are reset to Apprentice level 2 and RP = 0.
+* **Primus** all players are reset to Apprentice level 1 and RP = 0.
+* **Legendary** all players are reset to Disciple level 3 and RP = 0.
 
 
 This will let players climb up again, and it will also allow for people of similar skill to face off against each other for the initial hectic moments after a reset. Each Leaderboard Season should be archived and saved, so people can go back and look at it (players do like to look at their previous ATH achievements  etc.).
@@ -169,7 +173,7 @@ The set will take place at the same time as the 3rd Leaderboard Season reset for
 #### Climbing after reset
 To accelerate Legendary players, climb back to Legendary status, a boost could be used for the first week after a reset, e.g., instead of earning 20 RP for a win ex-legendary players would earn 30 points while in disciple, 25 points in primus. This serves two purposes:
 1. minimizes the number of times strong players might get matched up with much weaker players.
-2. makes the grind for legendary players shorter.
+2. makes the grind for legendary players shorter, so those that are dedicated to the leaderboard can get back to it sooner.
 
 #### Match Making after reset
 To minimize pairing legendary players with players that have never reached legendary before, all legendary players will first be matched with other Legendary players based on ELO ratings in the same tier, if no other legendary players can be found in tier after 30-45 second match with other players in the tier.
@@ -214,7 +218,7 @@ MA uses a hidden MMR (like most games), but like most other system they have cho
 * In best-of-three, these gains and losses are doubled, and only the match result counts. So if you win a match 2-1 in Gold, you move up 2 steps. 
 * Once you get enough steps, you’ll move into the next leve of that tier, or if you’re at level 1, into the next tier.
 Once you ascend into a new tier, you’re safe for the rest of the season. No matter how many times you lose, you can’t fall from a tier (e.g., from Gold 4 to Silver 1).
-Although losses can push you down a level within a tier (e.g., from Gold 3 to Gold 4), there is some protection when you move into a level (but has not been official published)
+Although losses can push you down a level within a tier (e.g., from Gold 3 to Gold 4), there is some protection when you move into a new level (but has not been official published)
 
 [Channel fireball more information about the ranking system](https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/how-many-games-do-you-need-to-play-to-hit-mythic-in-mtg-arena/#:~:text=There%20are%20six%20ranks%3A%20Bronze,tier%20consists%20of%206%20steps.)
 
@@ -275,18 +279,17 @@ there are five ranks that can be earned, all of which contain different tiers th
 https://www.ggrecon.com/guides/yu-gi-oh-master-duel-ranks-ranked-system/
 
 ### Pokemon Online
-doens't really have a ranking system.. 
+doens't really have a ranking system, and matchmaking is a total disaster, I only have this here as an example what NOT TO DO.
 https://forums.pokemontcg.com/topic/76579-competitive-modes-on-ptcgo/
 
 ### HeartStone
 
-Heartstone tracks players win through the ranking system using "Stars", get enough stars and you will rank up. 
+Heartstone tracks player's wins through the ranking system using "Stars", get enough stars and you will rank up. 
 
 * There are 40 new player ranks, 50 regular ranks, and a prestigious Legend rank above all other ranks. 
 * New players to Hearthstone start in the Apprentice League, which contains 40 ranks, from Apprentice 40 to Apprentice 1. These ranks are exclusive to new players only, and players cannot lose stars in these ranks.
 * There are five Tiers for established Hearthstone players: Bronze, Silver, Gold, Platinum, and Diamond. Each league has a range of 10 levels, numbered from 10 to 1 in increasing level. For example, a player can be categorized as being in "Gold 5", "Gold 2", or "Diamond 1".
 * Players advancing out of Diamond 1 of the normal player ranks will be inducted into the prestigious Legend rank.
-* 
 
 Winning matches earns players stars, and stars are needed to advance ranks. Each rank contains three "star slots", so only three stars are needed to advance out of each rank. The number of stars awarded for winning each match is determined by a Star Bonus, which is given at the start of each season, and also by a winning streak bonus. Players are awarded a Star Bonus based on both the player's MMR and numbered rank in the previous season.This Star Bonus is a multiplier on the number of stars a player earns from each match win.
 
@@ -306,7 +309,7 @@ https://hearthstone.fandom.com/wiki/Ranked
 
 Glicko was designed as an improvement to ELO. The math is more complicated, but what it introduces is a variable called $RD$ Rating Deviation, to track how active a player is and how this might make their rating deviate away from the actual number. It's adding variability over time. This translates to less variability in ratings gained/lost for players that play more regularly and are generally more active. For unrated players, or people that play rarely the rating jumps can be significant, this is done in an attempt to faster find the correct level of the player. One other big differences vs ELO is that ratings are not a zero sum, e.g. winner and loose will not gain/loose the same number of rating points, this is all related to the rating variability.
 
-for an easy overview of the glicko system: https://www.englishchess.org.uk/wp-content/uploads/2012/04/The_Glicko_system_for_beginners1.pdf
+for an [easy overview of the glicko system](https://www.englishchess.org.uk/wp-content/uploads/2012/04/The_Glicko_system_for_beginners1.pdf)
 
 and of course wikipedia got good coverage of it, and refernce to the original paper. https://en.wikipedia.org/wiki/Glicko_rating_system
 
