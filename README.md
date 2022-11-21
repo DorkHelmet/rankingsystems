@@ -96,6 +96,8 @@ Match making finds a pool of possible opponent, the pool of opponents is expande
 5. previous faced Opponents (but not last played)
 6. last played opponent.
 
+*Note:* MS/Blizzard/Riot test shows to be able to create good/optimal match making you need around 40 opponent in queue per player in a given match (so around 80 players for a 1v1 game) at the time of searching for a match, this means that you should have to have at least a minium of 60+ players per tier looking for a match at any given time, and ideally per level! using that as a basis for how many tiers, and how many levels to have for the best match making. [Source](https://youtu.be/-pglxege-gU?t=2840)
+
 #### Legendary match making
 Continue to itterate on the ELO ranking system currently being used.
 
@@ -147,8 +149,6 @@ If the system is expanded to 5 Levels per tier.
 |60%|42|	50|	63|	125|	280|
 |55%|46|	58|	77|	250|	431|
 |50%|50|	67|	100| N/A| |		
-
-
 
 ### Season reset
 CTA has already said there will be seasons, it is not clear yet if those seasons are going to coincide with the release of new set of cards, or the ladder reset is going to be more frequent, e.g., every 6-month based on card set release cycle, or monthly. I will make some suggestions on how to do reset, assuming a 6-month cycle for card releases (e.g., as we know Arkhante -> Mantris -> Rift, they are supposed to be roughly 6 months apart, so let's go with that assumption and for this proposal I will refer to it as Set Season vs Leaderboard Season.
@@ -246,20 +246,20 @@ LP gains per tier:
 
 so climing from Iron -> Dimond with a 50% win ration would take almost 300 games.
 
-Master works differently, as its more like an ELO style of gain/losses is based on opponent, as well as those around your ranking, but it has been made clear that it is impossible to climb in Master unless you can maintain a 62.5%+ win ratio.
+Master works differently, as its more like an ELO style of gain/losses which is based on opponent's rating, as well as a few other factor, but it has been made clear that it is impossible to climb in Master unless you can maintain a 62.5%+ win ratio.
 
 #### Season Reset
 Each season lasts two months. At the end of season, ranks will be partially reset for the new season.
 
-Master accounts will reset to Platinum 4, regardless of how much LP they have.
-Diamond and Platinum accounts will drop 750 LP.
-Gold and Silver accounts will drop 675 LP.
-Bronze and Iron accounts will reset to Iron IV.
+* Master accounts will reset to Platinum 4, regardless of how much LP they have.
+* Diamond and Platinum accounts will drop 750 LP.
+* Gold and Silver accounts will drop 675 LP.
+* Bronze and Iron accounts will reset to Iron IV.
 
 
-* https://leagueoflegends.fandom.com/wiki/Rank_(Legends_of_Runeterra)
-* https://www.reddit.com/r/LegendsOfRuneterra/comments/x3f8dr/new_lp_gainloss_changes_per_ranked_tier/
-* https://support-legendsofruneterra.riotgames.com/hc/en-us/articles/360041193433-Ranked-FAQ-Legends-of-Runeterra
+* [wiki](https://leagueoflegends.fandom.com/wiki/Rank_(Legends_of_Runeterra))
+* [redit post](https://www.reddit.com/r/LegendsOfRuneterra/comments/x3f8dr/new_lp_gainloss_changes_per_ranked_tier/)
+* [official article](https://support-legendsofruneterra.riotgames.com/hc/en-us/articles/360041193433-Ranked-FAQ-Legends-of-Runeterra)
 
 
 ### Gwent
@@ -274,7 +274,7 @@ https://www.reddit.com/r/gwent/wiki/ranked/#wiki_ranked_mode
 
 ### Yu-Gi-Oh Master Duel
 
-there are five ranks that can be earned, all of which contain different tiers that you can rise through. The YuGiOh Master Duel tiers are Rookie, Bronze, Silver, Gold, and Platinum, which all have a five further levels except Rookie, which has two.
+there are five ranks that can be earned, all of which contain different tiers that you can rise through. The YuGiOh Master Duel tiers are Rookie, Bronze, Silver, Gold, and Platinum, which all have a five further levels except Rookie, which has two. 
 
 https://www.ggrecon.com/guides/yu-gi-oh-master-duel-ranks-ranked-system/
 
