@@ -1,7 +1,7 @@
 # CTA ranking system
 
 ## Skill, Progression or Hybrid?
-In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g. for new players its a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In the next Section I explain how some of the most popular online TCG/CCGs have implemented their system, but for now lets dive into my proposal for CTA.
+In chess, ELO (or chess.com rating) rule all, everything is based on your rating, and that is what people chase. This is also what we have been experimenting with in CTA since the OpenBeta. This is what I would consider a pure "Skill" system, the alternative is a "progression system" like we know from RPGs etc you level up, you can have setbacks but generally you are progressing, and finally we got the hybrid solution which can combine the two systems, e.g. for new players its a progression system but for the top players its a pure skill system. Most online card games have either a progression system or a hybrid system. In a [later section](#existing-systems) I explain how some of the most popular online TCG/CCGs have implemented their system, but for now lets dive into my proposal for CTA.
 
 ## Tierd ranking system
 The purpose of a tierd ranking system is to make sure people get to play with other players that are similar in strength because feeling like you can win is very important to make people come back and play again, anyone that regularly get dominiated by stronger players is probably going to stop playing. It is also important to have an area where top players can face each other, where there is real competition. This proposal comes from my person interest in ranking/match making system and having played and read a lot about many different ranking system.
@@ -132,23 +132,102 @@ CTA uses a scalling K-Factor.
 
 
 
-## . Existing Systems
+## Existing Systems
 ### 1.1 Magic Arena
-MA uses a hidden MMR, but like most other system they have choosen to implement a tierd progressing system for ranked games
-reference[^1].
+MA uses a hidden MMR, but like most other system they have choosen to implement a tierd progressing system for ranked games:
+* There are six tiers: Bronze, Silver, Gold, Platinum, Diamond, and Mythic. Each non-Mythic rank has four levels, with level 1 being the best and level 4 being the worst within that tier. For Constructed, each level consists of 6 steps. For Limited, Bronze consists of 4 steps and all other tiers consist of 5 steps.
+* Tiers operate separately for Constructed and Limited. To tier up in Constructed, you’ll want to play in the “Ranked” best-of-one games or in the “Ranked” best-of-three games. Both contribute towards the same tier. To tier up in Limited, you’ll want to enter the best-of-one Draft events.
+* Everyone initially starts at Bronze level 4. You gain steps with wins: in best-of-one, it’s 2 steps gained per win in Bronze and Silver and 1 step gained per win in Gold, Platinum, and Diamond. You lose steps with a defeat: in best-of-one, it’s 0 steps lost per win in Bronze and 1 step lost per win in all other ranks.
+* In best-of-three, these gains and losses are doubled, and only the match result counts. So if you win a match 2-1 in Gold, you move up 2 steps. 
+* Once you get enough steps, you’ll move into the next leve of that tier, or if you’re at level 1, into the next tier.
+Once you ascend into a new tier, you’re safe for the rest of the season. No matter how many times you lose, you can’t fall from a tier (e.g., from Gold 4 to Silver 1).
+Although losses can push you down a level within a tier (e.g., from Gold 3 to Gold 4), there is some protection when you move into a level (but has not been official published)
 
-### 1.2 LoR
-Sources: [^2]
+[Channel fireball more information about the ranking system](https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/how-many-games-do-you-need-to-play-to-hit-mythic-in-mtg-arena/#:~:text=There%20are%20six%20ranks%3A%20Bronze,tier%20consists%20of%206%20steps.)
+
+### 1.2 Legends of Runeterra
+LoR uses a very similar system to LoL, basically:
+* There are 7 tiers, ordered: Iron, Bronze, Silver, Gold, Platinum, Diamond and Master.
+* Within each tier are numbered divisions, namely I, II, III and IV. The lower the division within a given tier, the closer each player is to the next tier. By earning enough points in Silver I, a player will be promoted to Gold IV.
+* Master tier functions a bit differently than the rest of the ranked system. It doesn't have divisions. Within the Master tier, players are ranked by Matchmaking Rating (MMR) from highest to lowest.
+* Players earn League Points (LP) by winning ranked matches in LoR, and lose points when lose ranked games. LP represents a numerical value from 1 to 100 that will rise and fall within a division based on your wins and losses. Once player LP exceed 100, they will climb to the next division, or the next tier.
+* Players who exceed 100 LP will get a promote. After getting a promote, the player LP is set to 10.
+* Player demote from a division when lose a game at 0 LP. As long as player has any LP, they won't demote from a lost match.
+* Players can demote from a higher division to a lower one, but they can't demote to a lower tier.
+* A Ranked season starts whenever a new expansion is released and shares its name.
+ 
+
+LP gains per tier:
+|Rank|LP Gain|LP Loss|Tie |Games needed on 50% WR|
+|-----|----|-----|------|----------|
+|Iron	|+50|-0|+10|16|
+|Bronze|+40|-10|+6|26.66|
+|Silver|+35|-15|0|40|
+|Gold|+30|-15|0|53.33|
+|Platinum|+25|-20|0|160|
+|Diamond|+22|-22 |0|-|
+
+so climing from Iron -> Dimond with a 50% win ration would take almost 300 games.
+
+Master works differently, as its more like an ELO style of gain/losses is based on opponent, as well as those around your ranking, but it has been made clear that it is impossible to climb in Master unless you can maintain a 62.5%+ win ratio.
+
+#### Season Reset
+Each season lasts two months. At the end of season, ranks will be partially reset for the new season.
+
+Master accounts will reset to Platinum 4, regardless of how much LP they have.
+Diamond and Platinum accounts will drop 750 LP.
+Gold and Silver accounts will drop 675 LP.
+Bronze and Iron accounts will reset to Iron IV.
+
+
+* https://leagueoflegends.fandom.com/wiki/Rank_(Legends_of_Runeterra)
+* https://www.reddit.com/r/LegendsOfRuneterra/comments/x3f8dr/new_lp_gainloss_changes_per_ranked_tier/
+* https://support-legendsofruneterra.riotgames.com/hc/en-us/articles/360041193433-Ranked-FAQ-Legends-of-Runeterra
+
+
 ### 1.3 Gwent
+
+When you're playing in Ranked Mode, you will be matched against opponents of the same rank. The ranks start from Rank 30 and go up to Rank 0 (also called Pro Rank). To go from a rank to another one, you need to earn 5 mosaic pieces and once you reach a new rank, you cannot go down during the season. You get a mosaic piece when you win a game, you lose one when you lose a game.
+
+Between rank 30 and 8 (included), you can get 2 pieces if you are on a winning streak (more than 3 wins in a row).
+
+At the end of the season, after getting your rewards, you will lose 0-3 rank(s) based on your final rank. Players at Rank 0 will drop to Rank 3 unless they're in top 500. Players from Rank 1 to 13 will lose 2 ranks and players with Rank from 14 to 23 will drop by one rank. Each season last a month and usually ends the last working day of the month at 10 AM (CET). Next one starts the same day at 12 PM (CET) or after patch if a patch is planned.
+
 https://www.reddit.com/r/gwent/wiki/ranked/#wiki_ranked_mode
-### 1.4 YMD
+
+### 1.4 Yu-Gi-Oh Master Duel
+
+there are five ranks that can be earned, all of which contain different tiers that you can rise through. The YuGiOh Master Duel tiers are Rookie, Bronze, Silver, Gold, and Platinum, which all have a five further levels except Rookie, which has two.
+
 https://www.ggrecon.com/guides/yu-gi-oh-master-duel-ranks-ranked-system/
-### 1.5 PTCGO
+
+### 1.5 Pokemon Online
+doens't really have a ranking system.. 
 https://forums.pokemontcg.com/topic/76579-competitive-modes-on-ptcgo/
+
 ### 1.6 HeartStone
+
+Heartstone tracks players win through the ranking system using "Stars" so get enough stars and you will rank up. 
+
+* There are 40 new player ranks, 50 regular ranks, and a prestigious Legend rank above all other ranks. 
+* New players to Hearthstone start in the Apprentice League, which contains 40 ranks, from Apprentice 40 to Apprentice 1. These ranks are exclusive to new players only, and players cannot lose stars in these ranks.
+* There are five Tiers for established Hearthstone players: Bronze, Silver, Gold, Platinum, and Diamond. Each league has a range of 10 levels, numbered from 10 to 1 in increasing level. For example, a player can be categorized as being in "Gold 5", "Gold 2", or "Diamond 1".
+* Players advancing out of Diamond 1 of the normal player ranks will be inducted into the prestigious Legend rank.
+* 
+
+Winning matches earns players stars, and stars are needed to advance ranks. Each rank contains three "star slots", so only three stars are needed to advance out of each rank. The number of stars awarded for winning each match is determined by a Star Bonus, which is given at the start of each season, and also by a winning streak bonus. Players are awarded a Star Bonus based on both the player's MMR and numbered rank in the previous season.This Star Bonus is a multiplier on the number of stars a player earns from each match win.
+
+For example, a Star Bonus of 7x means that a player will earn 7 stars for winning a match. Every player starts with at least 2 Star Bonus at the beginning of a season.
+
+Losing games causes players to lose a star, unless they are at a level floor. At a level floor, a player can never fall below that level for the remainder of the season. level floors occur at every 5 level in the ladder, for example at "Bronze 5" or "Gold 10". Upon climbing and hitting each level floor, a player's Star Bonus will decrease by 1, meaning that as a player climbs up in level, it will become more challenging for the player to climb up to higher ranks.
+
+Each month of Ranked play is called a season. The first time the player logs in or enters a match following the start of a new season, they will be shown a special announcement informing them of their rank at the end of the last season, their best rank during that season (which determines end-of-season rewards and next season's initial rank), their rewards for that season, and their rank at the start of the new season.
+
+At the start of each Ranked play season, all players are reset back to Bronze 10.
+
 https://hearthstone.fandom.com/wiki/Ranked
 
-# Other Systems
+# Alternatives to ELO
 
 ## Glicko
 
@@ -182,9 +261,5 @@ https://www.remi-coulom.fr/Bayesian-Elo/
 
 
 ## Footnotes
-
-[^1]: [fireball explanation of current ranking system](https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/how-many-games-do-you-need-to-play-to-hit-mythic-in-mtg-arena/#:~:text=There%20are%20six%20ranks%3A%20Bronze,tier%20consists%20of%206%20steps.)
-
-[^2]: asd
 
 [^3]: https://discord.com/channels/917028207566401586/917028207566401593/1041989794550530098
