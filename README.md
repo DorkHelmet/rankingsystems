@@ -45,7 +45,13 @@ To progress in primus requires a larger than 50% win rate, this is where it gets
 In legendary you no longer use RPs, but start using raw ELO (or whichever type of ranking system is used) to represent a users standing. Leaderboard shows the ELO raiting (as the current leaderboard). if ELO is used, everyone starts with rating of 1200, use sliding K factor (1000-1500 = 30, 1501-1750 = 25, 1751 - 2000 = 22, 2001-2250 = 20, 2251 - 2500 = 18, 2500+ = 15). Not possible to go below 1000 ELO.
 
 ### Promotion & Demotions
-Once a player 
+
+#### Promotion
+Once a player goes past 100 RP for a level they are promoted to the next level (possible tier promation, if it was Level 1). Each promation the player will autoamtically get 5 RP in the new level. 
+
+#### Demotion
+While a season is ongoing a player cannot be demoted to a lower tier, if the player is at 0 RP at a Level 3, loosing again will not change anything. A player start each level with 5 RPs, if a player loose a game and would end up with 0 or less than 0 RPs he will have 0 RPs for that level. A level demotion will only happen on the second loss while having 0 RPs. e.g.
+* Player A at level Primus 2, has 5 RPs, he looses a game, he will now be at Primus 2, with 0 RP, he looses again, but because it was the first loss at RP 0 there was no demotion, but if the player loose again the player will be demoted to Primus 3. 
 
 
 ### Match Making
@@ -56,12 +62,12 @@ Match making finds a pool of possible opponent, the pool of opponents is expande
 5. previous faced Opponents (but not last played)
 6. last played opponent.
 
-#### Legendary match makging
-Continue itterate on the ELO mach making system currently being used.
+#### Legendary match making
+Continue itterate on the ELO ranking system currently being used.
 
 
 ### Games required to reach Legendary
-Following is a table of the number of games that is required to reach the next tier starting from Neophyte 3 RP = 0, with a specific win %, this does not account for the level drop protection of 2 losses while being at 0 RP at a level.
+Following is a table of the number of games that is required to reach the next tier starting from Neophyte 3 RP = 0, with a specific win %, this does not account for the level demotion protection of 2 losses while being at 0 RP at a level.
 
 
 |Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
@@ -76,7 +82,7 @@ Following is a table of the number of games that is required to reach the next t
 |55%| 28 | 35 | 47 | 150 | 260 |
 |50%| 30 | 40 | 60 | N/A | 
 
-It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the argument could be, that is good because at Legendary tier is where the real competitive player starts so make it doable for playes to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 levels instead of the proposed 3 levels, this would show things down.
+It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the counter argument is that it is good because at Legendary tier is where the real competitive play starts. So make it doable for playes to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 or even 5 levels instead of the proposed 3 levels, this would slow things down, but still make people feel like they are making progress.
 
 ### Season reset
 CTA has already said there will be seasons, its not clear yet if those seasons are going to conside with the release of new set of cards, or the ladder reset is going to be more frequent, e.g. every 6 month based on card set release cycle, or monthly. I will make some suggestions on how to do reset, assuming a 6 month cycle for card releases (e.g. as we know Arkhante -> Mantris -> Rift, they are suppose to be roughly 6 month apart, so lets go with that assumption and for this proposal I will refer to it as Set Season vs Leaderboard Season.
@@ -105,6 +111,11 @@ To accelerate Legendary players climb back to Legendary status, a boost could be
 
 #### Match Making after reset
 To minimize pairing legendary players with players that have never reached legendary before, all legendary players will first be matched with other Legendary players based on ELO raitings in the same tier, if no other legendary players can be found in tier after 30-45 second match with other players in the tier.
+
+
+### Conclusion
+The proposed system is an amalgation of many of the most prominent competitive online card games currently. I have tried to include some of what I consider the best features and put them together with the purpose to make gaming the most fun for the most players, where players can feel a sense of progress, but also making players feel that reaching "Legendary" status is not easy and require a certain amount of dedication but not an obecene amount of it. Obiviously there are many numbers and features that can be tweaked, but I strongly think that a system like this would greatly enhance the player experience for both old and new players. One thing that I did not deleve into here, but which is closely linked to the ranking system is of course the rewards! There are 2 schools of thoughts on this either you give a bigger reward at the end of the season based on highest achivement, or you have one time (ever, or per season) rewards as players reach certain milestones e.g. Levels, tiers etc. Very common in other card games is of course the granting of avatars, card backs, frames, borders and other cosmetic things for players to show off how far they reached in a previous season.
+
 
 # 1. ELO in CTA
 Explanation how ELO works in CTA.
@@ -207,7 +218,7 @@ https://forums.pokemontcg.com/topic/76579-competitive-modes-on-ptcgo/
 
 ### 1.6 HeartStone
 
-Heartstone tracks players win through the ranking system using "Stars" so get enough stars and you will rank up. 
+Heartstone tracks players win through the ranking system using "Stars", get enough stars and you will rank up. 
 
 * There are 40 new player ranks, 50 regular ranks, and a prestigious Legend rank above all other ranks. 
 * New players to Hearthstone start in the Apprentice League, which contains 40 ranks, from Apprentice 40 to Apprentice 1. These ranks are exclusive to new players only, and players cannot lose stars in these ranks.
