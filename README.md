@@ -114,9 +114,37 @@ The following is a table of the number of games that are required to reach the n
 |65%| 24 | 27 | 32 | 50 | 133 | 
 |60%| 25 | 30 | 38 | 75 | 168 |
 |55%| 28 | 35 | 47 | 150 | 260 |
-|50%| 30 | 40 | 60 | N/A | 
+|50%| 30 | 40 | 60 | N/A | |
 
 It could be argued that these numbers are too small, and too many players might end up on Legendary status, but the counter argument is that it is good because at Legendary tier is where the real competitive play starts. Making it doable for players to qualify to that level in the first month of Leaderboard Season feels reasonable, though an easy way to slow things down would be to make each tier 4 or even 5 levels instead of the proposed 3 levels, this would slow things down, but still make people feel like they are making progress.
+
+#### 4 Levels per tier
+|Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
+|--------|--------|--------|--------|--------|--------|
+|100%|20|20|20|20| 80|
+|90%|23|	23|	24|	25|	95|
+|80% |25	|27	|29	|34|	115|
+|75%|27|	30|	32|	40|	129|
+|70%|29	|32|	37|	50|	148|
+|65%|31|	36|	43|	67|	177|
+|60%|34|	40|	50|	100|	224|
+|55%|37|	46|	62|	200|	345|
+|50%|40|	54|	80| N/A| |		
+
+#### 5 Levels per tier
+|Win Rate|Apprentice|Disciple|Primus|Legendary|Total|
+|--------|--------|--------|--------|--------|--------|
+|100%|25|25|25|25| 100|
+|90%|28|	29|	30|	32|	119|
+|80% |32|34|36|42|	144|
+|75%|34|	37|	40|	50|	161|
+|70%|36	|40|	46|	63|	185|
+|65%|39|	45|	53|	84|	221|
+|60%|42|	50|	63|	125|	280|
+|55%|46|	58|	77|	250|	431|
+|50%|50|	67|	100| N/A| |		
+
+
 
 ### Season reset
 CTA has already said there will be seasons, it is not clear yet if those seasons are going to coincide with the release of new set of cards, or the ladder reset is going to be more frequent, e.g., every 6-month based on card set release cycle, or monthly. I will make some suggestions on how to do reset, assuming a 6-month cycle for card releases (e.g., as we know Arkhante -> Mantris -> Rift, they are supposed to be roughly 6 months apart, so let's go with that assumption and for this proposal I will refer to it as Set Season vs Leaderboard Season.
