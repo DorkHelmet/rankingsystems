@@ -1,7 +1,7 @@
 # The Current System
 
 The following tiers exist:
-* Bronze - Where you start, at 300 points.
+* Bronze - Where you start
 * Silver
 * Gold
 * Platinum
@@ -18,11 +18,11 @@ The following tiers exist:
 * Match Making is still using the hidden ELO this can mean that you sometimes lose/gain more points than you would assume based on your opponent's current ranking on the leaderboard.
 * Leaderboard camping is prevented by forcing a number of games played based on the tier, or no reward will be awarded.
 
-The new system currently in place replaced the old system, which was a more pure skilled-based ELO system, and moved more towards a progression system but it is a strange mix, below follows a proposal to continue towards a more progression-oriented leaderboard system.
+The new system currently in place replaced the old system, which was a more pure skilled-based ELO system, and moved everything more towards a progression system but it is a strange mix, below follows a proposal to continue towards a more progression-oriented leaderboard system.
 
 
 # Proposal for changes to the Leaderboard
-League of Legends has by far one of the most successful online leaderboard implementations (it is similar in Legends of Runeterra) so instead of re-inventing the wheel when it comes to leaderboards why not do something similar? Though LoL and LoR have a lot more active players than CTA does, so scaling it down a bit might be the way to go, and keep some things things similar to what it is now.
+League of Legends has by far one of the most successful online leaderboard implementations (it is similar in Legends of Runeterra) so instead of re-inventing the wheel when it comes to leaderboards why not do something similar? Though LoL and LoR have a lot more active players than CTA does, so scaling it down a bit might be the way to go, and keep some things things similar to what it is now. The minimum number of games that has to be played, I think is good, and would recommend leaving as it is.
 
 ## The Tiers
 * Bronze
