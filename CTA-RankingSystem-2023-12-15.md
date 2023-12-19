@@ -52,7 +52,7 @@ Each tier (Bronze - Platinum) is split into two divisions "II" and "I", Each Div
 
 * ## Platinum
 * A win rewards 30 LPs
-* A loss, is -20 LPs
+* A loss, is -25 LPs
 
 * ## Diamond
 * A win rewards 25 LPs
