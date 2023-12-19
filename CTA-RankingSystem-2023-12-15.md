@@ -71,8 +71,8 @@ There are many ways to handle demotions, and in some games, it's not possible be
 
 **Tier example:**
 * The player is currently in Platinum II with 15 LPs.
-* The player loses one match and will get -20 LPs, but instead of going down tier, the player is set to 0 LP in Platinum II.
-* The player loses one more match and will get -20 LPs, but since the player is already at 0 the player will be demoted to Gold I with 140 LPs.
+* The player loses one match and will get -25 LPs, but instead of going down tier, the player is set to 0 LP in Platinum II.
+* The player loses one more match and will get -25 LPs, but since the player is already at 0 the player will be demoted to Gold I with 140 LPs.
 
 ## Promotion (moving up a tier)
 When a player breaks through to a new Division or Tier they will automatically get set to 10 LPs at a minimum, and 30 LPs at a maximum. This allows for some carryover from the last win in the previous tier and prevents anyone from starting with 0 LPs in the new division/tier.
