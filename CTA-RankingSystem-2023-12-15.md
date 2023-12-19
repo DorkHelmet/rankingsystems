@@ -22,7 +22,7 @@ The new system currently in place replaced the old system, which was a more pure
 
 
 # Proposal for changes to the Leaderboard
-League of Legends has by far one of the most successful online leaderboard implementations (it is similar in Legends of Runeterra) so instead of re-inventing the wheel when it comes to leaderboards why not do something similar? Though LoL and LoR have a lot more active players than CTA does, so scaling it down a bit might be the way to go, and keep some things things similar to what it is now. The minimum number of games that has to be played, I think is good, and would recommend leaving as it is.
+League of Legends has a very success leaderboard system, when it comes to player retention and players wanting to engage in it. (it is similar in Legends of Runeterra) so instead of re-inventing the wheel when it comes to leaderboards why not borrow some aspects? Though LoL and LoR have a lot more active players than CTA does currently so 4 divisions per tier is probably a bit excessive, so scaling it down a bit might be the way to go, and keep some things things similar to what it is now. CTA's minimum number of games that has to be played, I think is good, and would recommend leaving it as it is.
 
 ## The Tiers
 * Bronze
