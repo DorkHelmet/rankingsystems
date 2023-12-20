@@ -65,7 +65,7 @@ Each tier (Bronze - Diamond) is split into two divisions "II" and "I", Each Divi
 * A win rewards 25 LPs
 * A loss, is -25 LPs
 
-## Demotions (moving down a tier)
+## Demotions (moving down a division/tier)
 There are many ways to handle demotions, and in some games, it's not possible between tiers(e.g. LoL), but to stay with the theme/ethos of CTA where it is possible to fall a tier if you lose this could be kept. However I will recommend some safeguards to make it less painful because as we know everyone strives to make it into the next tier to earn the next great reward and it can be quite devastating/demoralizing to fall out of a tier, players need to face a challenge and overcome hardship but there is a thin line between a challenging environment and demoralizing one that turns players off the game.
 
 * if LP is larger than 0, but the lost LP is more than LPs remaining, LP is set to 0
