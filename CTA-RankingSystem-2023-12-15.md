@@ -56,7 +56,8 @@ Each tier (Bronze - Diamond) is split into two divisions "II" and "I", Each Divi
 * A win rewards 35 LPs
 * A loss, is -30 LPs
 
-* ## Diamond - From here on a player must have a win ratio of 50%+ to progress.
+* ## Diamond
+* From here on a player must have a win ratio of 50%+ to progress.
 * A win rewards 30 LPs
 * A loss, is -30 LPs
 
