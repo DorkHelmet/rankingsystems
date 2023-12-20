@@ -17,12 +17,13 @@ The following tiers exist:
 * You can drop a tier if you lose LPs. e.g. Gold at 10 LPs, and a loss with -50 points, you would end up in Silver 310.
 * Match Making is still using the hidden ELO this can mean that you sometimes lose/gain more points than you would assume based on your opponent's current ranking on the leaderboard.
 * Leaderboard camping is prevented by forcing a number of games played based on the tier, or no reward will be awarded.
+* Flex rewards are awarded to anyone in platinum and above, in platinum it's for the shards, and in Diamond it's shards + packs.
 
 The new system currently in place replaced the old system, which was a more pure skilled-based ELO system, and moved everything more towards a progression system but it is a strange mix, below follows a proposal to continue towards a more progression-oriented leaderboard system.
 
 
 # Proposal for changes to the Leaderboard
-League of Legends has a very success leaderboard system, when it comes to player retention and players wanting to engage in it. (it is similar in Legends of Runeterra) so instead of re-inventing the wheel when it comes to leaderboards why not borrow some aspects? Though LoL and LoR have a lot more active players than CTA does currently so 4 divisions per tier is probably a bit excessive, so scaling it down a bit might be the way to go, and keep some things things similar to what it is now. CTA's minimum number of games that has to be played, I think is good, and would recommend leaving it as it is.
+League of Legends has a very successful leaderboard system when it comes to player retention and players wanting to engage in it. (it is similar in Legends of Runeterra) so instead of re-inventing the wheel when it comes to leaderboards why not borrow some aspects? Though LoL and LoR have a lot more active players than CTA does currently so 4 divisions per tier is probably a bit excessive, so scaling it down a bit might be the way to go, and keep some things things similar to what it is now. CTA's minimum number of games that have to be played, I think is good, and would recommend leaving it as it is. I have introduced a tier above Diamond called Legendary, this is partially to make the trip a bit longer to move from Bronze to the top, and also to allow for new and struggling players to still feel that they are making real progress by pure dedication and number of games played. flex rewards are only awarded in Diamond and Legendary
 
 ## The Tiers
 * Bronze
@@ -30,10 +31,11 @@ League of Legends has a very success leaderboard system, when it comes to player
 * Gold
 * Platinum
 * Diamond
+* Legendary
   * Gladiator - The Top 11-110 in Diamond
   * Champion - The Top 1-10 in Diamond
 
-Each tier (Bronze - Platinum) is split into two divisions "II" and "I", Each Division is made up of 150 LPs. where it goes from Bronze II -> Bronze I -> Silver II ... 
+Each tier (Bronze - Diamond) is split into two divisions "II" and "I", Each Division is made up of 150 LPs. where it goes from Bronze II -> Bronze I -> Silver II ... 
 
 ## Bronze
 * A new player starts in Bronze II, with 100 LPs.
@@ -51,10 +53,14 @@ Each tier (Bronze - Platinum) is split into two divisions "II" and "I", Each Div
 * A loss, is -30 LPs
 
 * ## Platinum
-* A win rewards 30 LPs
-* A loss, is -25 LPs
+* A win rewards 35 LPs
+* A loss, is -30 LPs
 
-* ## Diamond
+* ## Diamond - From here on a player must have a win ratio of 50%+ to progress.
+* A win rewards 30 LPs
+* A loss, is -30 LPs
+
+* ## Legendary
 * A win rewards 25 LPs
 * A loss, is -25 LPs
 
@@ -87,18 +93,17 @@ Switching to TrueSkill MMR system would be preferable, But I do realize that is 
 * When multiple options are available use ELO to try to match similar ELO.
 
 **Example Gold II:**
-* first 60 seconds it will try to match with any other player in Gold II and if multiple possible opponents pick the opponent with closest ELO
+* first 60 seconds it will try to match with any other player in Gold II and if multiple possible opponents pick the opponent with the closest ELO
 * from 61 seconds opponent pool will be expanded to players in Gold I and Silver I, and if multiple possible opponents are available, match with the one closest in ELO
 
-**Example Platinum I:**
-* first 60 seconds it will try to match with any other player in Plat I and if multiple possible opponents pick the opponent with closest ELO
-* from 61 seconds opponent pool will be expanded to players in Diamond with less than 150 LPs and Platinum II, and if multiple possible opponents are available, match with the one closest in ELO
+**Example Diamond I:**
+* first 60 seconds it will try to match with any other player in Diamond I and if multiple possible opponents pick the opponent with the closest ELO
+* from 61 seconds opponent pool will be expanded to players in Legendary with less than 150 LPs and Diamond II, and if multiple possible opponents are available, match with the one closest in ELO
 
-**Player in Diamond**
-* first 60 seconds it will try to match with any player in Diamond +/- 100 LPs, if multiple possible opponents pick the opponent with closest ELO
-* from 61 seconds opponent pool will be expanded to any players Diamond, if multiple possible opponents pick the opponent with closest ELO 
-* from 90 seconds opponent pool will be expanded to Players in Platinum I, if multiple possible opponents pick the opponent with closest ELO
-
+**Example Legendary**
+* first 60 seconds it will try to match with any player in Legendary +/- 100 LPs and if multiple possible opponents pick the opponent with the closest ELO
+* from 61 seconds opponent pool will be expanded to any player in Legendary and if multiple possible opponents pick the opponent with the closest ELO 
+* from 90 seconds opponent pool will be expanded to Players in Diamond I and if multiple possible opponents pick the opponent with the closest ELO
 
 
 # ELO in CTA
