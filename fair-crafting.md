@@ -30,7 +30,7 @@ for merge/combo making check this [Noria article](https://noria.crosstheages.com
 |C|70%|0|0|0|
 |B|22%|73.33%|0|0|
 |A|7%|23.33%|87.5|0|
-|S|2%|3.33%|12.5|100%|
+|S|1%|3.33%|12.5|100%|
 
 ## Proposal
 In a similar way to packs, I believe crafting can be made to feel more fair but still have randomness, but still some guarantees of getting things over the long haul.
@@ -48,7 +48,7 @@ In a similar way to packs, I believe crafting can be made to feel more fair but 
 * There are 3 pools, based on the lowest card in the combo, C, B, and A.
 * there are 100 Combos in each pool.
 * stock for each pool is as the % above:
-  * C: 2S, 7A, 22B, 70C
+  * C: 1S, 7A, 22B, 70C
   * B: 3S, 23A, 74B, 0C
   * A: 12s, 88A, 0B, 0C
 * There is no difference between the rarity, it is all taken from the same pool.
